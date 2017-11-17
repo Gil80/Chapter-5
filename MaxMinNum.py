@@ -1,10 +1,10 @@
 # Exercise 2: Write another program that prompts for a list of numbers as above
-# and at the end prints out both the maximum and minimum of the numbers instead of the average.
+# and at the end prints out both the biggestimum and smallestimum of the numbers instead of the average.
 
-max = None
-min = None
-print('Max Before:', max)
-print('Min Before:', min)
+biggest = 0
+smallest = 0
+print('biggest Before:', biggest)
+print('smallest Before:', smallest)
 
 while True:
     itervar = input('Type a number > ')
@@ -15,9 +15,13 @@ while True:
     except:
         print('Invalid Input')
         continue
-    if itervar > max:
-        max = itervar
-        print('Loop:', itervar, max)
-    continue
+    if itervar > biggest:
+        biggest = itervar
+        print('Loop biggest:', itervar, biggest)
+        continue
+    elif smallest == 0 or itervar < smallest:
+        smallest = itervar
+        print('Loop smallest:', itervar, smallest)
+        continue
 
-print('max:', max)
+print('biggest:', biggest, 'smallest:', smallest)
