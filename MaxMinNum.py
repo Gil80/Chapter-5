@@ -10,14 +10,14 @@ while True:
     itervar = input('Type a number > ')
     if itervar == 'done':
         break
-    elif itervar > max:
-        max = itervar
-        print('Loop:', itervar, max)
-    continue
     try:
         itervar = int(itervar)  # checking if the input is an integer
     except:
         print('Invalid Input')
+        continue
+    if itervar > max:
+        max = itervar
+        print('Loop:', itervar, max)
     continue
 
 print('max:', max)
