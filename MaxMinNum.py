@@ -7,19 +7,17 @@ print('Max Before:', max)
 print('Min Before:', min)
 
 while True:
-    itervar = input('Type a number> ')
+    itervar = input('Type a number > ')
+    try:
+        itervar = int(itervar)  # checking if the input is an integer
+    except:
+        print('Invalid Input')
+        continue
     if input == 'done':
         break
-    for itervar in itervar:
-        if max is None or itervar > max:
-            max = itervar
+    elif itervar > max:
+        max = itervar
         print('Loop:', itervar, max)
     continue
 
 print('max:', max)
-
-'''   try:
-        line = int(usr_input)  # checking if the input is an integer
-    except:
-        print('Invaid input')
-        continue  # skip loop iteration and jump back to beginning of loop'''
